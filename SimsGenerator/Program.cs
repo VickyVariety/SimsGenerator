@@ -6,6 +6,138 @@ using System.Threading.Tasks;
 
 namespace SimsGenerator
 {
+    public class NameStorage
+    {
+        public static Dictionary<Culture, List<string>> lastNames;
+        //THIS IS A DUMMY DATABASE, ALSO VERY LAZY, ALSO DUMB
+        public static Dictionary<Culture, Dictionary<Gender, List<string>>> names = new Dictionary<Culture, Dictionary<Gender, List<string>>>() 
+        {
+            {
+                Culture.ALIEN, new Dictionary<Gender, List<string>>()
+                {
+                    {
+                        Gender.MALE, new List<string>()
+                        {
+                            "Zork Badork",
+                            "Cyth Mauglander"
+                        }
+                    },
+                    {
+                        Gender.FEMALE, new List<string>(){
+                            "Zork Badork",
+                            "Cyth Mauglander"
+                        }
+                    },
+                }
+            },
+            {
+                Culture.VAMPIRE, new Dictionary<Gender, List<string>>(){
+                    {
+                        Gender.MALE, new List<string>(){
+                            "Vampire Male 1",
+                            "Vampire Male 2"
+                        }
+                    },
+                    {
+                        Gender.FEMALE, new List<string>(){
+                            "Vampire Female 1",
+                            "Vampire Female 2"
+                        }
+                    },
+                }
+            },
+            {
+                Culture.ASIAN, new Dictionary<Gender, List<string>>()
+                {
+                    {
+                        Gender.MALE, new List<string>()
+                        {
+                            "Asian Male 1",
+                            "Asian Male 2"
+                        }
+                    },
+                    {
+                        Gender.FEMALE, new List<string>(){
+                            "Asien Female 1",
+                            "Asien Female 2"
+                        }
+                    },
+                }
+            },
+            {
+                Culture.RUSSIAN, new Dictionary<Gender, List<string>>()
+                {
+                    {
+                        Gender.MALE, new List<string>()
+                        {
+                            "Russian Male 1",
+                            "Russian Male 2"
+                        }
+                    },
+                    {
+                        Gender.FEMALE, new List<string>(){
+                            "Russian Female 1",
+                            "Russian Female 2"
+                        }
+                    },
+                }
+            },
+            {
+                Culture.WESTERN, new Dictionary<Gender, List<string>>()
+                {
+                    {
+                        Gender.MALE, new List<string>()
+                        {
+                            "Western Male 1",
+                            "Western Male 2"
+                        }
+                    },
+                    {
+                        Gender.FEMALE, new List<string>(){
+                            "Western Female 1",
+                            "Western Female 2"
+                        }
+                    },
+                }
+            },
+            {
+                Culture.OCCULT, new Dictionary<Gender, List<string>>()
+                {
+                    {
+                        Gender.MALE, new List<string>()
+                        {
+                            "Occult Male 1",
+                            "Occult Male 2"
+                        }
+                    },
+                    {
+                        Gender.FEMALE, new List<string>(){
+                            "Occult Female 1",
+                            "Occult Female 2"
+                        }
+                    },
+                }
+            },
+            {
+                Culture.AFRICAN, new Dictionary<Gender, List<string>>()
+                {
+                    {
+                        Gender.MALE, new List<string>()
+                        {
+                            "Afrian Male 1",
+                            "Afrian Male 2"
+                        }
+                    },
+                    {
+                        Gender.FEMALE, new List<string>(){
+                            "Afrian Female 1",
+                            "African Female 2"
+                        }
+                    },
+                }
+            },
+        };
+    }
 
     public class TraitIncompatibility
     {
@@ -38,6 +170,22 @@ namespace SimsGenerator
             this.t1 = t1;
             this.t2 = t2;
         }
+    }
+
+    public enum Gender
+    {
+        FEMALE,
+        MALE
+    }
+    public enum Culture
+    {
+        WESTERN,
+        AFRICAN,
+        ASIAN,
+        RUSSIAN,
+        ALIEN,
+        VAMPIRE,
+        OCCULT
     }
 
     public enum Trait
@@ -86,13 +234,36 @@ namespace SimsGenerator
     {
         string name;
         Random random;
+        Gender gender;
+        Culture culture;
         List<Trait> traits = new List<Trait>();
 
         public Sim(int seed)
         {
             random = new Random(seed);
-            name = "My Generated Sim: ";
+            
             traits = GetRandomNumTraits();
+            gender = GetRandomGender();
+            culture = GetRandomCulture();
+            name = GetProceduralName();
+        }
+
+        private string GetProceduralName()
+        {
+            List<string> availableNames = NameStorage.names[culture][gender];
+            return availableNames[random.Next(availableNames.Count)];
+        }
+
+        private Culture GetRandomCulture()
+        {
+            Culture[] values = (Culture[])Enum.GetValues(typeof(Culture));
+            return (Culture)values.GetValue(random.Next(values.Length));
+        }
+
+        private Gender GetRandomGender()
+        {
+            Gender[] values = (Gender[])Enum.GetValues(typeof(Gender));
+            return (Gender)values.GetValue(random.Next(values.Length));
         }
 
         public List<Trait> GetRandomNumTraits()
@@ -131,7 +302,10 @@ namespace SimsGenerator
 
         public override string ToString()
         {
-            return $"{name} {string.Join(", ", traits).Replace("__", "-").Replace("_", " ").ToLower()}";
+            int x = 2;
+            string str = "hej";
+            //return $"my first value:{1} my second value {x} and also a string value {str}";
+            return $"{name} {gender} {culture} {string.Join(", ", traits).Replace("__", "-").Replace("_", " ").ToLower()}";
         }
 
     }
