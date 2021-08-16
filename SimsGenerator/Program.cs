@@ -8,7 +8,85 @@ namespace SimsGenerator
 {
     public class NameStorage
     {
-        public static Dictionary<Culture, List<string>> lastNames;
+        public static Dictionary<Culture, List<string>> lastNames = new Dictionary<Culture, List<string>>()
+        {
+            {
+                Culture.ALIEN, new List<string>()
+                {
+                    "Mauglander",
+                    "Badork",
+                    "Phascoix",
+                    "Kholva",
+                    "Bhunox",
+                    "Sizhut",
+                    "Uzopoc",
+                    "Fanguul",
+                    "Thustu",
+                    "Nusdaanval",
+                    "Monowor",
+                    "Lusnul",
+                    "Munbuunwor",
+                    "Shilnowor",
+                    "Lisdu",
+                    "Simdunvaal",
+                    "Nannim",
+                    "Raslaaval",
+                    "Sasnaal",
+                    "Thonoval",
+                    "Cinmin",
+                    "Talgys"
+                }
+            },
+            {
+                Culture.AFRICAN, new List<string>()
+                {
+                    "African Surname 1",
+                    "African Surname 2"
+                }
+            },
+            {
+                Culture.ASIAN, new List<string>()
+                {
+                    "Asian Surname 1",
+                    "Asian Surname 2"
+                }
+            },
+            {
+                Culture.WESTERN, new List<string>()
+                {
+                    "Western Surname 1",
+                    "Western Surname 2"
+                }
+            },
+            {
+                Culture.VAMPIRE, new List<string>()
+                {
+                    "Vampire Surname 1",
+                    "Vampire Surname 2"
+                }
+            },
+            {
+                Culture.OCCULT, new List<string>()
+                {
+                    "Occult Surname 1",
+                    "Occult Surname 2"
+                }
+            },
+            {
+                Culture.MIDDLE_EASTERN, new List<string>()
+                {
+                    "Middle-Eastern Surname 1",
+                    "Middle-Eastern Surname 2"
+                }
+            },
+            {
+                Culture.RUSSIAN, new List<string>()
+                {
+                    "Russian Surname 1",
+                    "Russian Surname 2"
+                }
+            },
+        };
         //THIS IS A DUMMY DATABASE, ALSO VERY LAZY, ALSO DUMB
         public static Dictionary<Culture, Dictionary<Gender, List<string>>> names = new Dictionary<Culture, Dictionary<Gender, List<string>>>() 
         {
@@ -18,20 +96,103 @@ namespace SimsGenerator
                     {
                         Gender.MALE, new List<string>()
                         {
-                            "Zork Badork",
-                            "Cyth Mauglander"
+                            "Zork",
+                            "Cyth",
+                            "Caelum",
+                            "Cygnus",
+                            "Neptune",
+                            "Xabiere",
+                            "Xadrian",
+                            "Guxthaph",
+                            "Xan",
+                            "Xanthos",
+                            "Zaden",
+                            "Zadox",
+                            "Zakai",
+                            "Zaragosa",
+                            "Zaviero",
+                            "Zephyr",
+                            "Raxmuzh",
+                            "Mykaehl",
+                            "Taariq",
+                            "Xanadu",
+                            "Zailor",
+                            "Xias",
+                            "Xabeqa",
+                            "Zharor",
+                            "Nipunus",
+                            "Izar",
+                            "Xiryus",
+                            "Zenith",
+                            "Xabiq",
+                            "Ga'Lyxleo",
+                            "Eelyo",
+                            "Acrux",
+                            "Anzhul",
+                            "Belanozh",
+                            "Itri",
+                            "Lynxar"
                         }
                     },
                     {
                         Gender.FEMALE, new List<string>(){
-                            "Zork Badork",
-                            "Cyth Mauglander"
+                            "Alyxa",
+                            "Canopa",
+                            "Celestia",
+                            "Geleexa",
+                            "Nebula",
+                            "Neoma",
+                            "Olexa",
+                            "Ozma",
+                            "Eldredth",
+                            "Gilina",
+                            "Kreia",
+                            "Luminara",
+                            "Natira",
+                            "Noranti",
+                            "Rinya",
+                            "Ziona",
+                            "Zhora",
+                            "Starlee",
+                            "Rexalla",
+                            "Xannon",
+                            "Xandria",
+                            "Xanthippe",
+                            "Zagorka",
+                            "Zea",
+                            "Lyra",
+                            "Andromeda",
+                            "Trella",
+                            "Alpha",
+                            "Adhara",
+                            "Ascella",
+                            "Asterope",
+                            "Astra",
+                            "Aurora",
+                            "Cassiopeia",
+                            "Nashira",
+                            "Benexia",
+                            "Cytherea",
+                            "Delyth",
+                            "Eilonwy",
+                            "Illyria",
+                            "Ferelith",
+                            "Mireia",
+                            "Octavia",
+                            "Nymeria",
+                            "Sayyadina",
+                            "Zephyr",
+                            "Zephyrine",
+                            "Zathura",
+                            "Xyndrela",
+                            "Orithina"
                         }
                     },
                 }
             },
             {
-                Culture.VAMPIRE, new Dictionary<Gender, List<string>>(){
+                Culture.VAMPIRE, new Dictionary<Gender, List<string>>()
+                {
                     {
                         Gender.MALE, new List<string>(){
                             "Vampire Male 1",
@@ -136,7 +297,26 @@ namespace SimsGenerator
                     },
                 }
             },
+            {
+                Culture.MIDDLE_EASTERN, new Dictionary<Gender, List<string>>()
+                {
+                    {
+                        Gender.MALE, new List<string>()
+                        {
+                            "Middle Eastern Male 1",
+                            "Middle Eastern Male 2"
+                        }
+                    },
+                    {
+                        Gender.FEMALE, new List<string>(){
+                            "Middle Eastern Female 1",
+                            "Middle Eastern Female 2"
+                        }
+                    },
+                }
+            },
         };
+        
     }
 
     public class TraitIncompatibility
@@ -185,7 +365,8 @@ namespace SimsGenerator
         RUSSIAN,
         ALIEN,
         VAMPIRE,
-        OCCULT
+        OCCULT,
+        MIDDLE_EASTERN
     }
 
     public enum Trait
@@ -233,6 +414,7 @@ namespace SimsGenerator
     public class Sim
     {
         string name;
+        string lastName;
         Random random;
         Gender gender;
         Culture culture;
@@ -246,6 +428,13 @@ namespace SimsGenerator
             gender = GetRandomGender();
             culture = GetRandomCulture();
             name = GetProceduralName();
+            lastName = GetProceduralLastName();
+        }
+
+        private string GetProceduralLastName()
+        {
+            List<string> availableLastNames = NameStorage.lastNames[culture];
+            return availableLastNames[random.Next(availableLastNames.Count)];
         }
 
         private string GetProceduralName()
@@ -302,10 +491,10 @@ namespace SimsGenerator
 
         public override string ToString()
         {
-            int x = 2;
+            /*int x = 2;
             string str = "hej";
-            //return $"my first value:{1} my second value {x} and also a string value {str}";
-            return $"{name} {gender} {culture} {string.Join(", ", traits).Replace("__", "-").Replace("_", " ").ToLower()}";
+            return $"my first value:{1} my second value {x} and also a string value {str}";*/
+            return $"{name} {lastName}\n {gender}\n {culture}\n {string.Join(", ", traits).Replace("__", "-").Replace("_", " ").ToLower()}";
         }
 
     }
