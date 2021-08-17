@@ -34,7 +34,15 @@ namespace SimsGenerator
                     "Sasnaal",
                     "Thonoval",
                     "Cinmin",
-                    "Talgys"
+                    "Talgys",
+                    "Mallikk",
+                    "Ez'eks",
+                    "Ugzex",
+                    "Fal'aih",
+                    "Hikur",
+                    "Narreox",
+                    "Phihlai",
+                    ""
                 }
             },
             {
@@ -125,13 +133,28 @@ namespace SimsGenerator
                             "Xiryus",
                             "Zenith",
                             "Xabiq",
-                            "Ga'Lyxleo",
+                            "Zynyx",
                             "Eelyo",
                             "Acrux",
                             "Anzhul",
                             "Belanozh",
-                            "Itri",
-                            "Lynxar"
+                            "Ulyx",
+                            "Lynxar",
+                            "Anakin",
+                            "Atreyu",
+                            "Gaius",
+                            "Xavier",
+                            "Kylo",
+                            "Morpheus",
+                            "Zonor",
+                            "Azoux",
+                            "Aphyx",
+                            "Dzek",
+                            "Credo",
+                            "Hallox",
+                            "Izix",
+                            "Ion",
+                            "Xyphen"
                         }
                     },
                     {
@@ -195,14 +218,112 @@ namespace SimsGenerator
                 {
                     {
                         Gender.MALE, new List<string>(){
-                            "Vampire Male 1",
-                            "Vampire Male 2"
+                            "Vladimir",
+                            "Cassius",
+                            "Lazarus",
+                            "Sebastien",
+                            "Kieran",
+                            "Drake",
+                            "Edward",
+                            "Stephan",
+                            "Damon",
+                            "Godfrey",
+                            "Zane",
+                            "Darick",
+                            "Zaros",
+                            "Nikolas",
+                            "Leon",
+                            "Alaric",
+                            "Cassius",
+                            "Orpheus",
+                            "Luther",
+                            "Raul",
+                            "Silas",
+                            "Aleister",
+                            "Athan",
+                            "Demetrius",
+                            "Dmitri",
+                            "Mortimer",
+                            "Rufus",
+                            "Willfred",
+                            "Magnus",
+                            "Braeden",
+                            "Draven",
+                            "Jareth",
+                            "Spike",
+                            "Cleon",
+                            "Donovan",
+                            "Lucien",
+                            "Fabian",
+                            "Raphael",
+                            "Marcel",
+                            "Zachaeus",
+                            "Frederick",
+                            "Edwin",
+                            "Valentine",
+                            "Lancelot",
+                            "Benedict",
+                            "Isaiah",
+                            "Maxwell",
+                            "Gregory",
+                            "Elijah",
+                            "Theron",
+                            "Zachariah"
                         }
                     },
                     {
                         Gender.FEMALE, new List<string>(){
-                            "Vampire Female 1",
-                            "Vampire Female 2"
+                            "Belladonna",
+                            "Irina",
+                            "Lilah",
+                            "Lilith",
+                            "Eleanor",
+                            "Rosalyn",
+                            "Jacqueline",
+                            "Amber",
+                            "Esme",
+                            "Bianca",
+                            "Judith",
+                            "Edith",
+                            "Ada",
+                            "Agnes",
+                            "Agatha",
+                            "Blanche",
+                            "Adelia",
+                            "Clementine",
+                            "Cordelia",
+                            "Emmeline",
+                            "Estelle",
+                            "Ethel",
+                            "Melita",
+                            "Mildred",
+                            "Penelope",
+                            "Viola",
+                            "Zadie",
+                            "Myrtle",
+                            "Mae",
+                            "Irene",
+                            "Effie",
+                            "Arabella",
+                            "Gertrude",
+                            "Daphne",
+                            "Temperance",
+                            "Ruth",
+                            "Eliza",
+                            "Anne",
+                            "Eve",
+                            "Rosamund",
+                            "Gillian",
+                            "Millicent",
+                            "Cornelia",
+                            "Florence",
+                            "Cecily",
+                            "Joanne",
+                            "Guenevere",
+                            "Rosanna",
+                            "Catherine",
+                            "Rose",
+                            "Isobel"
                         }
                     },
                 }
@@ -352,6 +473,16 @@ namespace SimsGenerator
         }
     }
 
+    public enum Age
+    {
+        TODDLER,
+        CHILD,
+        TEEN,
+        YOUNG_ADULT,
+        ADULT,
+        ELDER
+    }
+
     public enum Gender
     {
         FEMALE,
@@ -410,6 +541,17 @@ namespace SimsGenerator
         NONCOMMITTAL,
         OUTGOING,
         GOOFBALL
+    }
+    public enum ToddlerTraits
+    {
+        ANGELIC,
+        CHARMER,
+        CLINGY,
+        FUSSY,
+        INDEPENDENT,
+        INQUISITIVE,
+        SILLY,
+        WILD
     }
     public class Sim
     {
