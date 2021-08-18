@@ -439,7 +439,44 @@ namespace SimsGenerator
         };
         
     }
+    public class Trait
+    {
+        public static List<Trait> traits = new List<SimsGenerator.Trait>()
+        {
+            new Trait(
+                "ROMANTIC",
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "DULL", "STOOPID", "ETC" }
+            ),
+            new Trait(
+                "ROMANTIC",
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "DULL", "STOOPID", "ETC" }
+            ),
+            new Trait(
+                "ROMANTIC",
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "DULL", "STOOPID", "ETC" }
+            ),
+            new Trait(
+                "ROMANTIC",
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "DULL", "STOOPID", "ETC" }
+            ),
+        };
+        public List<Age> availableForAges;
+        public List<string> collidesWithTraits;
+        public string name;
 
+        public Trait(string name, List<Age> availableForAges, List<string> collidesWithTraits)
+        {
+            this.name = name;
+            this.availableForAges = availableForAges;
+            this.collidesWithTraits = collidesWithTraits;
+        }
+
+       
+    }
     public class TraitIncompatibility
     {
         public Trait t1;
