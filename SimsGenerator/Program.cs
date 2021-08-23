@@ -444,24 +444,194 @@ namespace SimsGenerator
         public static List<Trait> traits = new List<SimsGenerator.Trait>()
         {
             new Trait(
-                "ROMANTIC",
+                "Romantic",
                 new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){ "DULL", "STOOPID", "ETC" }
+                new List<string>(){ "Unflirty" }
             ),
             new Trait(
-                "ROMANTIC",
+                "Unflirty",
                 new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){ "DULL", "STOOPID", "ETC" }
+                new List<string>(){ "Romantic" }
             ),
             new Trait(
-                "ROMANTIC",
-                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){ "DULL", "STOOPID", "ETC" }
+                "Good",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Evil", "Mean", "Kleptomaniac" }
             ),
             new Trait(
-                "ROMANTIC",
+                "Kleptomaniac",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Good" }
+            ),
+            new Trait(
+                "Evil",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Good", "Childish" }
+            ),
+            new Trait(
+                "Childish",
                 new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){ "DULL", "STOOPID", "ETC" }
+                new List<string>(){ "Evil", "Hates children", "Snob" }
+            ),
+            new Trait(
+                "Mean",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Good" }
+            ),
+            new Trait(
+                "Cheerful",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Gloomy", "Hot-headed" }
+            ),
+            new Trait(
+                "Gloomy",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Cheerful", "Hot-headed" }
+            ),
+            new Trait(
+                "Hot-headed",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Cheerful", "Gloomy" }
+            ),
+            new Trait(
+                "Family-oriented",
+                new List<Age>(){ Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Hates children", "Noncommittal" }
+            ),
+            new Trait(
+                "Hates children",
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Family-oriented", "Childish" }
+            ),
+            new Trait(
+                "Noncommittal",
+                new List<Age>(){ Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Family-oriented" }
+            ),
+            new Trait(
+                "Goofball",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Snob" }
+            ),
+            new Trait(
+                "Snob",
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Childish", "Goofball" }
+            ),
+            new Trait(
+                "Foodie",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Glutton" }
+            ),
+            new Trait(
+                "Glutton",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Foodie", }
+            ),
+            new Trait(
+                "Lazy",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Neat", "Ambitious", "Active" }
+            ),
+            new Trait(
+                "Neat",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Lazy", "Slob" }
+            ),
+            new Trait(
+                "Slob",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Neat" }
+            ),
+            new Trait(
+                "Loner",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Outgoing" }
+            ),
+            new Trait(
+                "Outgoing",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Loner" }
+            ),
+            new Trait(
+                "Ambitious",
+                new List<Age>(){ Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Lazy" }
+            ),
+            new Trait(
+                "Active",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){ "Lazy" }
+            ),
+            new Trait(
+                "Loves outdoors",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Materialistic",
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Geek",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Vegetarian",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Creative",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Erratic",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Jealous",
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Perfectionist",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Genius",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Self-assured",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Music lover",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Bookworm",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Art lover",
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
+            ),
+            new Trait(
+                "Bro",
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
+                new List<string>(){}
             ),
         };
         public List<Age> availableForAges;
@@ -477,7 +647,7 @@ namespace SimsGenerator
 
        
     }
-    public class TraitIncompatibility
+    /*public class TraitIncompatibility
     {
         public Trait t1;
         public Trait t2;
@@ -509,6 +679,7 @@ namespace SimsGenerator
             this.t2 = t2;
         }
     }
+*/
 
     public enum Age
     {
@@ -536,49 +707,7 @@ namespace SimsGenerator
         OCCULT,
         MIDDLE_EASTERN
     }
-
-    public enum Trait
-    {
-        ACTIVE,
-        GLUTTON,
-        ROMANTIC,
-        CREATIVE,
-        GLOOMY,
-        CHILD_OF_THE_ISLANDS,
-        GOOD,
-        EVIL,
-        FOODIE,
-        SLOB,
-        NEAT,
-        CHEERFUL,
-        HOT__HEADED,
-        SELF__ASSURED,
-        HATES_CHILDREN,
-        UNFLIRTY,
-        ART_LOVER,
-        BOOK_WORM,
-        MUSIC_LOVER,
-        PERFECTIONIST,
-        AMBITIOUS,
-        CHILDISH,
-        CLUMSY,
-        ERRATIC,
-        KLEPTOMANIAC,
-        LAZY,
-        LOVES_OUTDOORS,
-        MATERIALISTIC,
-        SNOB,
-        SQUEAMISH,
-        VEGETARIAN,
-        BRO,
-        FAMILY__ORIENTED,
-        JEOLOUS,
-        LONER,
-        MEAN,
-        NONCOMMITTAL,
-        OUTGOING,
-        GOOFBALL
-    }
+   
     public enum ToddlerTraits
     {
         ANGELIC,
@@ -655,7 +784,7 @@ namespace SimsGenerator
             return result;
         }
 
-        private bool CheckTraitCompatibility(Trait t1, List<Trait> result)
+        /*private bool CheckTraitCompatibility(Trait t1, List<Trait> result)
         {
             foreach (Trait t2 in result)
             {
@@ -666,7 +795,7 @@ namespace SimsGenerator
                 }
             }
             return true;
-        }
+        }*/
 
         public override string ToString()
         {
@@ -678,8 +807,7 @@ namespace SimsGenerator
 
     }
     class Program
-    {
-        //public int amountOfSims = Convert.ToInt32(Console.ReadLine());
+    {        
         static void Main(string[] args)
         {
             for (; ; )
