@@ -570,116 +570,119 @@ namespace SimsGenerator
             ),
             new Trait(
                 "Materialistic",
-                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Geek",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Vegetarian",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Creative",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Erratic",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Jealous",
-                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Perfectionist",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Genius",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Self-assured",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Music lover",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Bookworm",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Art lover",
-                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.CHILD, Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
             new Trait(
                 "Bro",
-                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER },
-                new List<string>(){}
+                new List<Age>(){ Age.TEEN, Age.YOUNG_ADULT, Age.ADULT, Age.ELDER }
             ),
         };
         public List<Age> availableForAges;
         public List<string> collidesWithTraits;
+        public Pack availableInPack;
         public string name;
 
+        public Trait(string name, List<Age> availableForAges)
+        {
+            this.name = name;
+            this.availableForAges = availableForAges;
+            this.collidesWithTraits = new List<string>();
+            this.availableInPack = Pack.BASE_GAME;
+        }
         public Trait(string name, List<Age> availableForAges, List<string> collidesWithTraits)
         {
             this.name = name;
             this.availableForAges = availableForAges;
             this.collidesWithTraits = collidesWithTraits;
+            this.availableInPack = Pack.BASE_GAME;
+        }
+        public Trait(string name, List<Age> availableForAges, Pack availableInPack)
+        {
+            this.name = name;
+            this.availableForAges = availableForAges;
+            this.collidesWithTraits = new List<string>();
+            this.availableInPack = availableInPack;
+        }
+        public Trait(string name, List<Age> availableForAges, List<string> collidesWithTraits, Pack availableInPack)
+        {
+            this.name = name;
+            this.availableForAges = availableForAges;
+            this.collidesWithTraits = collidesWithTraits;
+            this.availableInPack = availableInPack;
         }
 
-       
+
     }
-    /*public class TraitIncompatibility
+    
+    public enum Pack
     {
-        public Trait t1;
-        public Trait t2;
-        public static List<TraitIncompatibility> incompatible = new List<TraitIncompatibility>()
-        {
-            new TraitIncompatibility(Trait.GOOD, Trait.EVIL),
-            new TraitIncompatibility(Trait.GOOD, Trait.MEAN),
-            new TraitIncompatibility(Trait.SLOB, Trait.NEAT),
-            new TraitIncompatibility(Trait.SLOB, Trait.SQUEAMISH),
-            new TraitIncompatibility(Trait.CHEERFUL, Trait.GLOOMY),
-            new TraitIncompatibility(Trait.GLOOMY, Trait.HOT__HEADED),
-            new TraitIncompatibility(Trait.UNFLIRTY, Trait.ROMANTIC),
-            new TraitIncompatibility(Trait.NONCOMMITTAL, Trait.FAMILY__ORIENTED),
-            new TraitIncompatibility(Trait.FAMILY__ORIENTED, Trait.HATES_CHILDREN),
-            new TraitIncompatibility(Trait.CHILDISH, Trait.HATES_CHILDREN),
-            new TraitIncompatibility(Trait.GLUTTON, Trait.FOODIE),
-            new TraitIncompatibility(Trait.GLUTTON, Trait.SQUEAMISH),
-            new TraitIncompatibility(Trait.ACTIVE, Trait.LAZY),
-            new TraitIncompatibility(Trait.SNOB, Trait.GOOFBALL),
-            new TraitIncompatibility(Trait.SNOB, Trait.CHILDISH),
-            new TraitIncompatibility(Trait.KLEPTOMANIAC, Trait.GOOD),
-            new TraitIncompatibility(Trait.EVIL, Trait.CHILDISH),
-            new TraitIncompatibility(Trait.GLUTTON, Trait.FOODIE),
-        };
-
-        public TraitIncompatibility(Trait t1, Trait t2)
-        {
-            this.t1 = t1;
-            this.t2 = t2;
-        }
+        BASE_GAME,
+        GET_TO_WORK,
+        GET_TOGETHER,
+        CITY_LIVING,
+        CATS_AND_DOGS,
+        SEASONS,
+        GET_FAMOUS,
+        ISLAND_LIVING,
+        DISCOVER_UNIVERSITY,
+        ECO_LIFESTYLE,
+        SNOWY_ESCAPE,
+        COTTAGE_LIVING,
+        OUTDOOR_RETREAT,
+        SPA_DAY,
+        DINE_OUT,
+        VAMPIRES,
+        PARENTHOOD,
+        JUNGLE_ADVENTURE,
+        STRANGERVILLE,
+        REALM_OF_MAGIC,
+        STAR_WARS_JOURNEY_TO_BATUU,
+        DREAM_HOME_DECORATOR
     }
-*/
 
     public enum Age
     {
@@ -777,8 +780,8 @@ namespace SimsGenerator
 
                 if (result.Contains(randomTrait))
                     continue;
-                if (!CheckTraitCompatibility(randomTrait, result))
-                    continue;
+                /*if (!CheckTraitCompatibility(randomTrait, result))
+                    continue;*/
                 result.Add(randomTrait);
             }
             return result;
@@ -816,6 +819,16 @@ namespace SimsGenerator
 
                 int amountOfSims = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
+                Program.PrintPacksLegend();
+                List<Pack> packsToUse = Console.ReadLine();
+                /*
+                Vi ska skapa en metod som tar emot console.readline
+                metoden ska returnera en List<Pack> och lagra den i packsToUse
+                Komma separerad input ska string splittas och konverteras till int32
+                Sedan ska vi ha kul med vad vi får från metoden när vi genererar simmar :)
+                */
+                
+
 
                 List<Sim> sims = new List<Sim>();
                 int max = 999;
@@ -833,6 +846,16 @@ namespace SimsGenerator
                 Console.Clear();
             }
         }
+        static void PrintPacksLegend()
+        {
+            foreach (int enumIndex in Enum.GetValues(typeof(Pack)))
+            {
+                String enumKey = Enum.GetName(typeof(Pack), enumIndex);
+                Console.WriteLine($"{enumIndex}, {enumKey}");
+                
+            }
+        }
+      
 
         /*
          PrintResult SHOULD ONLY BE CALLED ONCE!
